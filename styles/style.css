@@ -1,0 +1,65 @@
+.wrapper {
+	width: 600px;
+	height: 600px;
+	background-color: #e6cbae;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+}
+.desk {
+	width: 95%;
+	height: 95%;
+	background-color: #0F0A05;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border: 1px solid #0f0a05;
+}
+/* style for div in div.desk */
+.desk > div {
+	width: 100%;
+	height: 12.5%;
+}
+/* style for div in div in div.desk */
+.desk > div > div {
+	width: 12.5%;
+	height: 100%;
+	float: left;
+}
+
+.desk > div:nth-child(odd) div:nth-child(even),
+.desk > div:nth-child(even) div:nth-child(odd) {
+	background-color: #FFF;
+}
+
+/* add black checkers */
+.desk div:nth-child(1) div:nth-child(odd):after,
+.desk div:nth-child(2) div:nth-child(even):after,
+.desk div:nth-child(3) div:nth-child(odd):after {
+	content: '';
+	background-color: #392A25;
+	border-radius: 50%;
+	width: 80%;
+	height: 80%;
+	float: left;
+	margin: 10%;
+}
+
+/* add red checkers */
+.desk div:nth-child(6) div:nth-last-child(odd):after,
+.desk div:nth-child(7) div:nth-last-child(even):after,
+.desk div:nth-child(8) div:nth-last-child(odd):after {
+	content: '';
+	background-color: #B31B28;
+	border-radius: 50%;
+	width: 80%;
+	height: 80%;
+	float: left;
+	margin: 10%;
+}
